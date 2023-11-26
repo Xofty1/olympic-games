@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="images/x-icon" href="materials/icon.png" />
+    <title>Олимпийские игры</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="burger-menu">
+          <input type="checkbox" id="menu-toggle" />
+          <label id="trigger" for="menu-toggle"></label>
+          <label id="burger" for="menu-toggle"></label>
+          <ul id="menu">
+            <li><a href="main.html">Главная</a></li>
+            <li><a href="disciplines.html">Дисциплины</a></li>
+            <li><a href="countries.html">Страны</a></li>
+          </ul>
+        </div>
+        <nav class="main-menu">
+          <ul class="main-menu__inner">
+            <li><a href="main.html">Главная</a></li>
+            <li><a href="disciplines.html">Дисциплины</a></li>
+            <li><a href="countries.html">Страны</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <div class="for_h with_margin">
+          <h1>Как проходили олимпийские игры в разных странах?</h1>
+        </div>
+        <div class="all-video">
+          <div class="for_h">
+            <h2>Naim Süleymanoğlu</h2>
+          </div>
+          <div class="video-container first-video">
+            <video class="my-video" controls width="320" height="180">
+              <source src="materials/am_niam.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <img
+              src="materials/antique.jpg"
+              alt="Description"
+              class="styled-image"
+            />
+          </div>
+          <div class="for_h">
+            <h2>Naim Süleymanoğlu</h2>
+          </div>
+          <div class="video-container end-video">
+            <p class="video-info">Видео 2</p>
+            <video class="my-video" controls width="320" height="180">
+              <source src="materials/am_niam.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

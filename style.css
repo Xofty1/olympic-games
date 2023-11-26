@@ -1,0 +1,364 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font: 14pt "Roboto", sans-serif;
+}
+ul {
+  list-style-type: none;
+}
+
+header {
+  z-index: 1;
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #41b3a3;
+  font: 14pt "Roboto", sans-serif;
+  font-weight: 700;
+  line-height: 1.8;
+  text-decoration: none;
+  text-transform: none;
+  list-style: none;
+}
+/* h1 {
+  word-wrap: break-word;
+  justify-content: center;
+  align-items: center;
+} */
+.for_h {
+  display: flex;
+  color: #41b3a3;
+  word-wrap: break-word;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-menu {
+  width: 100%;
+}
+
+.main-menu__inner {
+  display: flex;
+  justify-content: space-around;
+}
+.main-menu__inner a {
+  color: white;
+}
+
+.marquee-infinite {
+  margin: 30px auto;
+  max-width: 100%;
+  overflow: hidden;
+}
+@keyframes marquee-infinite {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.marquee-infinite div {
+  display: flex;
+  width: 200%;
+  animation: marquee-infinite 20s linear infinite;
+}
+.marquee-infinite span {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.marquee-infinite img {
+  width: 20%;
+}
+
+/* ------------------------------- */
+
+@keyframes checked-anim {
+  50% {
+    width: 3000px;
+    height: 3000px;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+}
+@keyframes not-checked-anim {
+  0% {
+    width: 3000px;
+    height: 3000px;
+  }
+}
+#menu li,
+#menu a {
+  margin: 75px 0 -55px 0;
+  color: #41b3a3;
+  outline: 0;
+  display: none;
+}
+
+#menu li {
+  width: 230px;
+  text-indent: 56px;
+}
+
+#trigger,
+#burger,
+#burger:before,
+#burger:after {
+  position: absolute;
+  top: 21px;
+  left: 16px;
+  background: #41b3a3;
+  width: 30px;
+  height: 5px;
+  transition: 0.2s ease;
+  cursor: pointer;
+  z-index: 1;
+}
+#trigger {
+  height: 25px;
+  background: none;
+}
+#burger:before {
+  content: " ";
+  top: 10px;
+  left: 0;
+}
+#burger:after {
+  content: " ";
+  top: 20px;
+  left: 0;
+}
+#menu-toggle:checked + #trigger + #burger {
+  top: 35px;
+  transform: rotate(180deg);
+  transition: transform 0.2s ease;
+}
+
+#menu-toggle:checked + #trigger + #burger:before {
+  width: 20px;
+  top: -2px;
+  left: 18px;
+  transform: rotate(45deg) translateX(-5px);
+  transition: transform 0.2s ease;
+}
+#menu-toggle:checked + #trigger + #burger:after {
+  width: 20px;
+  top: 2px;
+  left: 18px;
+  transform: rotate(-45deg) translateX(-5px);
+  transition: transform 0.2s ease;
+}
+#menu {
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  width: 80px;
+  height: 80px;
+  background-color: #fff;
+  border-bottom-right-radius: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+
+  transition: 0.2s;
+}
+
+.animate {
+  animation: not-checked-anim 0.2s both;
+}
+
+#menu-toggle:checked + #trigger + #burger + #menu {
+  animation: checked-anim 1s ease both;
+}
+#menu-toggle:checked + #trigger ~ #menu > li,
+#menu a {
+  display: block;
+}
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  display: none;
+}
+.burger-menu {
+  display: none;
+}
+@media (max-width: 768px) {
+  .main-menu {
+    display: none;
+  }
+  .burger-menu {
+    display: block;
+  }
+
+  .define_history {
+    flex-wrap: wrap;
+  }
+}
+/*----------------------------*/
+
+.main_wrapper_stadium {
+  position: relative;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.9);
+}
+.wrapper_img_stadium {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes opac {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.text_stadium {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.main_wrapper_stadium__big,
+.main_wrapper_stadium__small {
+  position: absolute;
+  opacity: 0;
+  /* margin-left: 20px; */
+
+  word-wrap: break-word; /* Добавляем свойство для переноса слов */
+  /* white-space: normal; */
+}
+
+.main_wrapper_stadium__big {
+  top: 35%;
+  font-size: 10vw;
+  font-weight: 700;
+  animation: opac 1s linear 0.3s forwards;
+}
+
+.main_wrapper_stadium__small {
+  top: 65%;
+  font-size: 5vw;
+  animation: opac 1s linear 0.9s forwards;
+}
+.stadium_img {
+  width: 2000px;
+  height: 100vh;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Цвет затемнения (черный с прозрачностью) */
+}
+
+/* scrollbar */
+
+/* Общие стили для полоски прокрутки */
+::-webkit-scrollbar {
+  width: 8px; /* Ширина полоски прокрутки */
+}
+
+/* Стили для трека (бара) полоски прокрутки */
+::-webkit-scrollbar-track {
+  background: white; /* Цвет фона трека */
+}
+
+/* Стили для ручки (драгера) полоски прокрутки */
+::-webkit-scrollbar-thumb {
+  background: #888; /* Цвет ручки прокрутки */
+  border-radius: 6px; /* Скругление углов ручки */
+}
+
+/* Стили при наведении на полоску прокрутки */
+::-webkit-scrollbar-thumb:hover {
+  background: #41b3a3; /* Цвет ручки при наведении */
+}
+
+/* end of scrollbar */
+
+/* -- content -- */
+.define_history {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.history {
+  margin: 0 10px;
+}
+
+.history_img {
+  width: 60vw;
+  height: auto;
+}
+
+.with_margin {
+  margin-top: 35px;
+}
+
+.hidden-text {
+  display: none;
+  opacity: 0;
+  animation: opac 0.4s linear forwards;
+}
+
+.video-container {
+  flex-direction: column;
+  padding: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  /* margin-top:  */
+
+  background-color: #41b3a3;
+}
+.end-video {
+  padding-bottom: 0vh;
+  background-color: #e27d60;
+}
+video {
+  margin: 10px 0;
+  width: auto;
+  height: 60vh;
+}
+
+/*------*/
+.styled-image {
+  width: 60vh;
+  height: auto;
+  border: 10px solid #e8a87c;
+  border-radius: 8px;
+  margin: 10px;
+  transition: border-color 0.3s ease;
+}
+
+/* Стили при наведении на изображение с классом "styled-image" */
+.styled-image:hover {
+  border-color: #ff7f50;
+}
