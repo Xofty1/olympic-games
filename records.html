@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="images/x-icon" href="materials/icon.png" />
+    <title>Олимпийские игры</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="burger-menu">
+          <input type="checkbox" id="menu-toggle" />
+          <label id="trigger" for="menu-toggle"></label>
+          <label id="burger" for="menu-toggle"></label>
+          <ul id="menu">
+            <li><a href="main.html">Главная</a></li>
+            <li><a href="disciplines.html">Дисциплины</a></li>
+            <li><a href="records.html">Страны</a></li>
+            <li><a href="continents.html">Олимпийская эмблема</a></li>
+          </ul>
+        </div>
+        <nav class="main-menu">
+          <ul class="main-menu__inner">
+            <li><a href="main.html">Главная</a></li>
+            <li><a href="disciplines.html">Дисциплины</a></li>
+            <li><a href="records.html">Страны</a></li>
+            <li><a href="continents.html">Олимпийская эмблема</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <div class="main_wrapper">
+          <div class="main_wrapper_first_img">
+            <div class="wrapper_img_first_img">
+              <div class="overlay"></div>
+              <img
+                src="materials/records.jpg"
+                alt="stadium"
+                draggable="false"
+                class="stadium_img"
+              />
+            </div>
+            <div class="text_first_img">
+              <div class="main_wrapper_first_img__big">Олимпийские рекорды</div>
+            </div>
+          </div>
+        </div>
+        <div class="for_h with_margin">
+          <h1>Как проходили олимпийские игры в разных странах?</h1>
+        </div>
+        <div class="all-video">
+          <div class="for_h">
+            <h2>Naim Süleymanoğlu</h2>
+          </div>
+          <div class="video-container first-video">
+            <video class="my-video" autoplay muted loop>
+              <source src="materials/lifter_record.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div class="div_overlay_video">
+              <img
+                src="materials/lifter.png"
+                alt="Description"
+                class="styled-image"
+              />
+            </div>
+          </div>
+          <div class="for_h">
+            <h2>Naim Süleymanoğlu</h2>
+          </div>
+          <div class="video-container revers end-video">
+            <video class="my-video" autoplay muted loop>
+              <source src="materials/football_record.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div class="div_overlay_video_rev">
+              <img
+                src="materials/footballer.png"
+                alt="Description"
+                class="styled-image-rever"
+              />
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <div class="info">
+          <ul class="info__inner">
+            Олимпийские игры
+            <li class="first_li_info"><a href="main.html">Главная</a></li>
+            <li><a href="disciplines.html">Дисциплины</a></li>
+            <li><a href="records.html">Страны</a></li>
+          </ul>
+          <ul class="info__inner">
+            Олимпийские игры
+            <li class="first_li_info"><a href="main.html">Главная</a></li>
+            <li><a href="disciplines.html">Дисциплины</a></li>
+            <li><a href="records.html">Страны</a></li>
+          </ul>
+          <ul class="info__inner">
+            Олимпийские игры
+            <li class="first_li_info"><a href="main.html">Главная</a></li>
+            <li><a href="disciplines.html">Дисциплины</a></li>
+            <li><a href="records.html">Страны</a></li>
+            <li><a href="continents.html">Олимпийская эмблема</a></li>
+          </ul>
+        </div>
+        <div class="social-web">
+          <a href="#" class="social-link">
+            <img src="materials/telegram.png" alt="telegram" />
+          </a>
+          <a href="#" class="social-link">
+            <img src="materials/vk.png" alt="vk" />
+          </a>
+          <a href="#" class="social-link">
+            <img src="materials/youtube.png" alt="youtube" />
+          </a>
+        </div>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

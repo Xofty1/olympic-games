@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     },
-    { threshold: 0.5 }
+    { threshold: 0.77 }
   );
 
   videos.forEach(function (video) {
@@ -65,3 +65,27 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+function changeSize(element) {
+  var hiddenText = element.querySelector(".hidden-text-new");
+
+  // Используем атрибут данных для хранения состояния
+  var isIncreased = element.getAttribute("data-increased") === "true";
+
+  // Переключаемся между увеличением и уменьшением размеров
+  if (isIncreased) {
+    element.style.width = 12 + "vw";
+    element.style.height = 12 + "vw";
+    element.style.borderRadius = "50%";
+    hiddenText.style.display = "none"; // Скрываем текст при уменьшении
+  } else {
+    element.style.width = 22 + "vw";
+    element.style.height = "auto";
+    element.style.borderRadius = "0";
+    element.style.borderRadius = 7 + "px";
+    hiddenText.style.display = "block"; // Показываем текст при увеличении
+  }
+
+  // Инвертируем состояние и обновляем атрибут данных
+  element.setAttribute("data-increased", !isIncreased);
+}
