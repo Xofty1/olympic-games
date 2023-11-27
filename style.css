@@ -15,7 +15,9 @@ body {
 ul {
   list-style-type: none;
 }
-
+a {
+  text-decoration: none;
+}
 header {
   z-index: 1;
   display: flex;
@@ -30,11 +32,11 @@ header {
   text-transform: none;
   list-style: none;
 }
-/* h1 {
-  word-wrap: break-word;
-  justify-content: center;
-  align-items: center;
-} */
+
+footer {
+  margin-top: 8px;
+}
+
 .for_h {
   display: flex;
   color: #41b3a3;
@@ -111,7 +113,7 @@ header {
 }
 
 #menu li {
-  width: 230px;
+  width: 280px;
   text-indent: 56px;
 }
 
@@ -172,7 +174,6 @@ header {
   background-color: #fff;
   border-bottom-right-radius: 100%;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
-
   transition: 0.2s;
 }
 
@@ -362,3 +363,40 @@ video {
 .styled-image:hover {
   border-color: #ff7f50;
 }
+
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #41b3a3;
+  color: white;
+}
+
+.info__inner {
+  margin: 10px 5px;
+}
+.info__inner a {
+  color: white;
+  /* margin-top: 30px; */
+  font-size: 15px;
+}
+.first_li_info {
+  margin-top: 10px;
+}
+
+.social-web {
+  background-color: #41b3a3;
+  display: flex;
+  justify-content: center;
+}
+
+.social-link > img {
+  background-color: white;
+  border-radius: 10px;
+  width: 5vw;
+  padding: 4px;
+  margin: 0 7px;
+}
+
+/*----------------------------*/

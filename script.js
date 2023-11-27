@@ -1,9 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
   var checkbox = document.getElementById("menu-toggle");
   var menu = document.getElementById("menu");
+  var clickCount = 0;
 
   checkbox.addEventListener("change", function () {
-    menu.classList.add("animate");
+    clickCount++;
+
+    if (clickCount % 2 === 0) {
+      menu.classList.toggle("animate");
+    }
   });
 });
 
