@@ -10,6 +10,7 @@ html {
   padding: 0;
 }
 body {
+  overflow: hidden;
   -webkit-user-select: none; /* для веб-браузеров на базе WebKit, таких как Chrome и Safari */
   -moz-user-select: none; /* для браузеров Firefox */
   -ms-user-select: none; /* для Internet Explorer */
@@ -255,12 +256,15 @@ footer {
   top: 35%;
   font-size: 10vw;
   font-weight: 700;
+}
+.main_wrapper_first_img__big.animate-big {
   animation: opac 1s linear 0.3s forwards;
 }
-
 .main_wrapper_first_img__small {
   top: 65%;
   font-size: 5vw;
+}
+.main_wrapper_first_img__small.animate-small {
   animation: opac 1s linear 0.9s forwards;
 }
 .stadium_img {
@@ -640,7 +644,7 @@ video {
 }
 
 /* -------- */
-.preloader {
+/* .preloader {
   position: absolute;
   left: 0;
   top: 0;
@@ -671,7 +675,7 @@ video {
   font-weight: bold;
   color: white;
   font-size: medium;
-}
+} */
 
 .lds-roller {
   display: inline-block;
@@ -756,4 +760,73 @@ video {
   100% {
     transform: rotate(360deg);
   }
+}
+.preloader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: #41b3a3;
+  z-index: 1000;
+  transition: all 0.09s ease-out;
+}
+/* 
+.preloader__row {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 70px;
+  height: 70px;
+  margin-top: -35px;
+  margin-left: -35px;
+  text-align: center;
+  animation: preloader-rotate 2s infinite linear;
+}
+
+.preloader__item {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  background-color: #337ab7;
+  border-radius: 100%;
+  width: 35px;
+  height: 35px;
+  animation: preloader-bounce 2s infinite ease-in-out;
+}
+
+.preloader__item:last-child {
+  top: auto;
+  bottom: 0;
+  animation-delay: -1s;
+}
+
+@keyframes preloader-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes preloader-bounce {
+  0%,
+  100% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+} */
+
+.loaded_hiding .preloader {
+  transition: 0.3s opacity;
+  opacity: 0;
+}
+
+.loaded .preloader {
+  display: none;
 }

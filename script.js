@@ -1,4 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
+  document
+    .querySelector(".main_wrapper_first_img__big")
+    .classList.add("animate-big");
+  document
+    .querySelector(".main_wrapper_first_img__small")
+    .classList.add("animate-small");
+
   var checkbox = document.getElementById("menu-toggle");
   var menu = document.getElementById("menu");
   var clickCount = 0;
@@ -19,7 +26,6 @@ function revealText(element) {
 
 document.addEventListener("DOMContentLoaded", function () {
   var videos = document.querySelectorAll(".my-video");
-
   var observer = new IntersectionObserver(
     function (entries) {
       entries.forEach(function (entry) {
@@ -83,19 +89,28 @@ function changeSize(element) {
   element.setAttribute("data-increased", !isIncreased);
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const mediaFiles = document.querySelectorAll("img, video");
-  let i = 0;
+// document.addEventListener("DOMContentLoaded", () => {
+//   const mediaFiles = document.querySelectorAll("img, video");
+//   let i = 0;
 
-  Array.from(mediaFiles).forEach((file, index) => {
-    file.onload = () => {
-      console.log(file, index);
-      i++;
-      percents.innerHTML = ((i * 100) / mediaFiles.length).toFixed(1);
-      if (i === mediaFiles.length) {
-        preloader.classList.add("preloader--hide");
-        percents.innerHTML = 100;
-      }
-    };
-  });
-});
+//   Array.from(mediaFiles).forEach((file, index) => {
+//     file.onload = () => {
+//       console.log(file, index);
+//       i++;
+//       percents.innerHTML = ((i * 100) / mediaFiles.length).toFixed(1);
+//       if (i === mediaFiles.length) {
+//         preloader.classList.add("preloader--hide");
+//         percents.innerHTML = 100;
+//       }
+//     };
+//   });
+// });
+
+window.onload = function () {
+  document.body.style.overflow = "auto";
+  document.body.classList.add("loaded_hiding");
+  window.setTimeout(function () {
+    document.body.classList.add("loaded");
+    document.body.classList.remove("loaded_hiding");
+  }, 500);
+};
