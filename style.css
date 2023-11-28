@@ -71,6 +71,10 @@ footer {
   max-width: 100%;
   overflow: hidden;
 }
+.marquee-infinite img {
+  width: 16vw;
+  height: 29vmax;
+}
 @keyframes marquee-infinite {
   0% {
     transform: translateX(0);
@@ -210,6 +214,13 @@ footer {
 
   .define_history {
     flex-wrap: wrap;
+  }
+  .with_none {
+    display: none;
+  }
+  .marquee-infinite img {
+    width: 19vw;
+    height: 23vmax;
   }
 }
 /*----------------------------*/
