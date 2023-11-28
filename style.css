@@ -357,7 +357,11 @@ footer {
 }
 
 .div_overlay_video:hover::after {
-  content: "Надпись при наведении";
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: end;
+  content: " ";
   position: absolute;
   top: 0;
   left: 0;
@@ -365,7 +369,7 @@ footer {
   height: 100%;
   color: white;
   font-size: 18px;
-  background: #e27c606b;
+  background: #e27c60c5;
   padding: 10px;
   border-radius: 5px;
 }
@@ -379,7 +383,11 @@ footer {
 }
 
 .div_overlay_video_rev:hover::after {
-  content: "Надпись при наведении";
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: end;
+  content: " ";
   position: absolute;
   top: 0;
   left: 0;
@@ -387,7 +395,7 @@ footer {
   height: 100%;
   color: white;
   font-size: 18px;
-  background: #41b3a36b;
+  background: #41b3a3c5;
   padding: 10px;
   border-radius: 5px;
 }
@@ -417,7 +425,7 @@ video {
   position: relative;
   width: 32vw;
   height: auto;
-  border: 10px solid #e27c60;
+  border: 5px solid #e27c60;
   border-radius: 8px;
   /* margin: 10px; */
   transition: border-color 0.3s ease;
@@ -428,7 +436,7 @@ video {
   position: relative;
   width: 32vw;
   height: auto;
-  border: 10px solid #41b3a3;
+  border: 5px solid #41b3a3;
   border-radius: 8px;
   /* margin: 10px; */
   transition: border-color 0.3s ease;
@@ -444,25 +452,44 @@ video {
   background-color: rgba(0, 0, 0, 0.9);
 }
 .div_overlay_video {
-  margin: 0;
+  margin: 0 7px;
   padding: 0;
+  display: flex;
   position: relative;
   display: inline-block;
 }
 .div_overlay_video_rev {
-  margin: 0;
+  margin: 0 7px;
   padding: 0;
   position: relative;
+  display: flex;
+  display: inline-block;
+}
+.div_overlay_text {
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -90%);
+  color: white;
+  z-index: 2;
+  display: none;
+}
+
+.div_overlay_video:hover .div_overlay_text {
+  display: inline-block;
+}
+.div_overlay_video_rev:hover .div_overlay_text {
   display: inline-block;
 }
 @keyframes shad {
   100% {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.65);
   }
 }
 @keyframes shad_rev {
   0% {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.65);
   }
 }
 .my-video {
@@ -477,18 +504,13 @@ video {
 
 .my-video:hover {
   animation: shad 0.3s ease-in-out forwards;
-  transform: scale(1.05); /* Небольшое увеличение при наведении */
+  transform: scale(1.03); /* Небольшое увеличение при наведении */
 }
 
 .revers {
   flex-direction: row-reverse;
 }
 /* Стили при наведении на изображение с классом "styled-image" */
-.styled-image:hover {
-  border-color: #ff7f50;
-  animation: shad 0.3s ease-in-out forwards;
-  transform: scale(1.05);
-}
 
 .info {
   display: flex;
@@ -529,6 +551,7 @@ video {
   width: 200px;
   height: 350px;
   border-radius: 10px;
+  margin-bottom: 10px;
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.6);
 }
 
@@ -587,17 +610,19 @@ video {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 10px;
 }
 
-.myDiv:hover {
+/* .myDiv:hover {
   width: 22vw;
   height: 22vw;
+  animation: shad 0.3s ease-in-out forwards;
 }
 
 .myDiv:hover .hidden-text-new {
   display: block;
   opacity: 1;
-}
+} */
 
 .hidden-text-new {
   display: none;
