@@ -17,16 +17,18 @@
           <ul id="menu">
             <li><a href="main.html">Главная</a></li>
             <li><a href="disciplines.html">Дисциплины</a></li>
-            <li><a href="records.html">Страны</a></li>
+            <li><a href="records.html">Олимпийские рекорды</a></li>
             <li><a href="continents.html">Олимпийская эмблема</a></li>
+            <li><a href="about.html">О нас</a></li>
           </ul>
         </div>
         <nav class="main-menu">
           <ul class="main-menu__inner">
             <li><a href="main.html">Главная</a></li>
             <li><a href="disciplines.html">Дисциплины</a></li>
-            <li><a href="records.html">Страны</a></li>
+            <li><a href="records.html">Олимпийские рекорды</a></li>
             <li><a href="continents.html">Олимпийская эмблема</a></li>
+            <li><a href="about.html">О нас</a></li>
           </ul>
         </nav>
       </header>
@@ -48,40 +50,81 @@
             </div>
           </div>
         </div>
-        <div class="for_h with_margin">
+        <div class="for_h">
           <h1>Какие же дисциплины существуют на олимпийских играх?</h1>
         </div>
+        <div class="seasons">
+          <ul class="season">
+            <li onclick="revealText(this)">
+              <div class="for_h">
+                <h3 class="background_color">BMX-мотокрос</h3>
+              </div>
+              <div class="collapse">
+                <div class="hidden-text">
+                  В BMX-гонках максимум восемь гонщиков соревнуются на трассе с
+                  прямыми участками, буграми и виражами. Побеждает тот, кто
+                  первым пересечет финишную черту.
+                </div>
+              </div>
+            </li>
 
-        <ul>
-          <li onclick="revealText(this)">
-            <div class="for_h to_left"><h3>BMX-мотокрос</h3></div>
-            <span class="hidden-text"
-              >В BMX-гонках максимум восемь гонщиков соревнуются на трассе с
-              прямыми участками, буграми и виражами. Побеждает тот, кто первым
-              пересечет финишную черту.</span
-            >
-          </li>
-          <li onclick="revealText(this)">
-            <div class="for_h to_left"><h3>Баскетбол</h3></div>
-            <span class="hidden-text"
-              >Баскетбол – это командный вид спорта на прямоугольной площадке.
-              Две команды по пять игроков соревнуются, кто наберет больше очков,
-              забрасывая мяч в кольцо, или корзину, соперника.</span
-            >
-          </li>
-          <li onclick="revealText(this)">
-            AAA<br />
-            <span class="hidden-text">Это 3 буквы</span>
-          </li>
-          <li onclick="revealText(this)">
-            AAA<br />
-            <span class="hidden-text">Это 3 буквы</span>
-          </li>
-          <li onclick="revealText(this)">
-            AAA<br />
-            <span class="hidden-text">Это 3 буквы</span>
-          </li>
-        </ul>
+            <li onclick="revealText(this)">
+              <div class="for_h">
+                <h3 class="background_color">BMX-фристайл</h3>
+              </div>
+              <div class="collapse">
+                <div class="hidden-text">
+                  В BMX-фристайле спортсмены выполняют трюки на ровной
+                  поверхности, в городской среде, на грунтовой трассе, в
+                  хафпайпе и/или на специальной рампе. Судьи оценивают
+                  выступления по сложности, оригинальности и точности
+                  исполнения.
+                </div>
+              </div>
+            </li>
+
+            <li onclick="revealText(this)">
+              <div class="for_h">
+                <h3 class="background_color">Баскетбол</h3>
+              </div>
+              <div class="collapse">
+                <div class="hidden-text">
+                  Баскетбол – это командный вид спорта на прямоугольной
+                  площадке. Две команды по пять игроков соревнуются, кто наберет
+                  больше очков, забрасывая мяч в кольцо, или корзину, соперника.
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <ul class="season">
+            <li onclick="revealText(this)">
+              <div class="for_h to_left">
+                <h3 class="background_color">BMX-мотокрос</h3>
+              </div>
+              <div class="collapse">
+                <div class="hidden-text">
+                  В BMX-гонках максимум восемь гонщиков соревнуются на трассе с
+                  прямыми участками, буграми и виражами. Побеждает тот, кто
+                  первым пересечет финишную черту.
+                </div>
+              </div>
+            </li>
+
+            <li onclick="revealText(this)">
+              <div class="for_h to_left">
+                <h3 class="background_color">Баскетбол</h3>
+              </div>
+              <div class="collapse">
+                <div class="hidden-text">
+                  Баскетбол – это командный вид спорта на прямоугольной
+                  площадке. Две команды по пять игроков соревнуются, кто наберет
+                  больше очков, забрасывая мяч в кольцо, или корзину, соперника.
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
         <div class="marquee-infinite">
           <div>
             <span>
@@ -117,20 +160,21 @@
             Олимпийские игры
             <li class="first_li_info"><a href="main.html">Главная</a></li>
             <li><a href="disciplines.html">Дисциплины</a></li>
-            <li><a href="records.html">Страны</a></li>
+            <li><a href="records.html">Олимпийские рекорды</a></li>
           </ul>
           <ul class="info__inner">
             Олимпийские игры
             <li class="first_li_info"><a href="main.html">Главная</a></li>
             <li><a href="disciplines.html">Дисциплины</a></li>
-            <li><a href="records.html">Страны</a></li>
+            <li><a href="records.html">Олимпийские рекорды</a></li>
           </ul>
           <ul class="info__inner">
             Олимпийские игры
             <li class="first_li_info"><a href="main.html">Главная</a></li>
             <li><a href="disciplines.html">Дисциплины</a></li>
-            <li><a href="records.html">Страны</a></li>
+            <li><a href="records.html">Олимпийские рекорды</a></li>
             <li><a href="continents.html">Олимпийская эмблема</a></li>
+            <li><a href="about.html">О нас</a></li>
           </ul>
         </div>
         <div class="social-web">

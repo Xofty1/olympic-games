@@ -52,9 +52,7 @@ footer {
   justify-content: center;
   align-items: center;
 }
-.to_left {
-  justify-content: flex-start;
-}
+
 .main-menu {
   width: 100%;
 }
@@ -329,10 +327,21 @@ footer {
 }
 
 .hidden-text {
-  display: none;
+  min-height: 0;
+  /* display: none; */
   opacity: 0;
   animation: opac 0.6s linear forwards;
   color: #41b3a3;
+}
+
+.collapse {
+  display: grid;
+  grid-template-rows: 0fr;
+  overflow: hidden;
+  transition: grid-template-rows 200ms ease-in-out;
+}
+.collapse.open {
+  grid-template-rows: 1fr;
 }
 
 .div_overlay_video img {
@@ -520,31 +529,112 @@ video {
 }
 
 /*----------------------------*/
+
+.text {
+  margin: 10px;
+}
+
+.blue {
+  padding: 2px;
+  border: 1.3vmin solid blue;
+}
+.blue_text {
+  color: blue;
+}
+.black {
+  padding: 2px;
+  border: 1.3vmin solid black;
+}
+
+.black_text {
+  color: black;
+}
+.yellow {
+  padding: 2px;
+  border: 1.3vmin solid yellow;
+}
+
+.yellow_text {
+  color: yellow;
+}
+.red {
+  padding: 2px;
+  border: 1.3vmin solid red;
+}
+.red_text {
+  color: red;
+}
+.green {
+  padding: 2px;
+  border: 1.3vmin solid green;
+}
+.green_text {
+  color: green;
+}
+
 .myDiv {
   width: 12vw;
   height: 12vw;
-  background-color: lightblue;
   cursor: pointer;
-  margin: 10px;
+  background-color: transparent;
+  margin: 2px;
   border-radius: 50%;
   transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.row {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+.myDiv:hover {
+  width: 22vw;
+  height: 22vw;
+}
+
+.myDiv:hover .hidden-text-new {
+  display: block;
+  opacity: 1;
 }
 
 .hidden-text-new {
   display: none;
   opacity: 0;
   animation: opac 0.6s linear forwards;
-  color: white;
   padding: 5px;
   font-size: 3vmin;
 }
 
-.text {
-  margin: 10px;
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.seasons {
+  display: flex;
+}
+.season {
+  text-align: center;
+}
+.background_color {
+  width: 100%;
+  animation: back_color_rev 0.4s ease-in-out forwards;
+}
+.background_color:hover {
+  animation: back_color 0.4s ease-in-out forwards;
+}
+
+@keyframes back_color {
+  100% {
+    background-color: #41b3a3;
+    color: white;
+    margin: 0 4vw;
+    border-radius: 10px;
+  }
+}
+@keyframes back_color_rev {
+  0% {
+    background-color: #41b3a3;
+    color: white;
+    margin: 0 4vw;
+    border-radius: 10px;
+  }
 }

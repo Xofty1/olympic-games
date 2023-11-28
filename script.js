@@ -6,19 +6,15 @@ document.addEventListener("DOMContentLoaded", function () {
   checkbox.addEventListener("change", function () {
     clickCount++;
 
-    if (clickCount % 2 === 0) {
+    if (clickCount == 2) {
       menu.classList.toggle("animate");
     }
   });
 });
 
 function revealText(element) {
-  var hiddenText = element.querySelector(".hidden-text");
-  if (hiddenText.style.display === "none" || hiddenText.style.display === "") {
-    hiddenText.style.display = "inline";
-  } else {
-    hiddenText.style.display = "none";
-  }
+  var hiddenText = element.querySelector(".collapse");
+  hiddenText.classList.toggle("open");
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -76,13 +72,10 @@ function changeSize(element) {
   if (isIncreased) {
     element.style.width = 12 + "vw";
     element.style.height = 12 + "vw";
-    element.style.borderRadius = "50%";
     hiddenText.style.display = "none"; // Скрываем текст при уменьшении
   } else {
     element.style.width = 22 + "vw";
-    element.style.height = "auto";
-    element.style.borderRadius = "0";
-    element.style.borderRadius = 7 + "px";
+    element.style.height = 22 + "vw";
     hiddenText.style.display = "block"; // Показываем текст при увеличении
   }
 
