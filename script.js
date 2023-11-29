@@ -97,3 +97,44 @@ window.onload = function () {
     document.body.classList.remove("loaded_hiding");
   }, 500);
 };
+// Получаем ссылку на холст и его контекст
+const canvas = document.getElementById("drawCanvas");
+const ctx = canvas.getContext("2d");
+
+// Устанавливаем размер холста в размер окна
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+// Переменные для отслеживания состояния мыши
+let painting = false;
+
+// Функция начала рисования
+function startPainting() {
+  painting = true;
+  draw(event);
+}
+
+// Функция прекращения рисования
+function stopPainting() {
+  painting = false;
+  ctx.beginPath();
+}
+
+// Функция рисования
+function draw(event) {
+  if (!painting) return;
+
+  ctx.lineWidth = 5;
+  ctx.lineCap = "round";
+  ctx.strokeStyle = "black";
+
+  ctx.lineTo(event.clientX, event.clientY);
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.moveTo(event.clientX, event.clientY);
+}
+
+// Добавляем обработчики событий для мыши
+canvas.addEventListener("mousedown", startPainting);
+canvas.addEventListener("mouseup", stopPainting);
+canvas.addEventListener("mousemove", draw);

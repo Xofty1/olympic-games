@@ -86,7 +86,7 @@ footer {
 .marquee-infinite div {
   display: flex;
   width: 200%;
-  animation: marquee-infinite 20s linear infinite;
+  animation: marquee-infinite 50s linear infinite;
 }
 .marquee-infinite span {
   width: 100%;
@@ -222,6 +222,9 @@ footer {
     width: 19vw;
     height: 23vmax;
   }
+  .seasons {
+    flex-wrap: wrap;
+  }
 }
 /*----------------------------*/
 
@@ -343,10 +346,12 @@ footer {
 
 .hidden-text {
   min-height: 0;
-  /* display: none; */
+  margin: 2px 12px;
+  font-size: 24px;
+  color: #2f8277;
   opacity: 0;
   animation: opac 0.6s linear forwards;
-  color: #41b3a3;
+  /* color: #41b3a3; */
 }
 
 .collapse {
@@ -651,11 +656,13 @@ video {
 }
 .seasons {
   display: flex;
+  /* flex-wrap: wrap; */
 }
 .season {
-  text-align: center;
+  text-align: justify;
 }
 .background_color {
+  font-size: 35px;
   width: 100%;
   animation: back_color_rev 0.4s ease-in-out forwards;
 }
@@ -834,4 +841,7 @@ video {
 
 .loaded .preloader {
   display: none;
+}
+canvas {
+  display: block;
 }
