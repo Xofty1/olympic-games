@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
 }
 
 *,
@@ -15,7 +16,8 @@ body {
   -moz-user-select: none; /* для браузеров Firefox */
   -ms-user-select: none; /* для Internet Explorer */
   user-select: none;
-  font: 14pt "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  /* font: 14pt "Roboto", sans-serif; */
 }
 ul {
   list-style-type: none;
@@ -30,7 +32,7 @@ header {
   top: 0;
   width: 100%;
   background-color: #41b3a3;
-  font: 14pt "Roboto", sans-serif;
+  /* font: 14pt "Roboto", sans-serif; */
   font-weight: 700;
   line-height: 1.8;
   text-decoration: none;
@@ -270,7 +272,7 @@ footer {
 }
 
 .main_wrapper_first_img__big {
-  top: 35%;
+  top: 30%;
   font-size: 10vw;
   font-weight: 700;
 }
@@ -278,7 +280,7 @@ footer {
   animation: opac 1s linear 0.3s forwards;
 }
 .main_wrapper_first_img__small {
-  top: 65%;
+  top: 80%;
   font-size: 5vw;
 }
 .main_wrapper_first_img__small.animate-small {
@@ -351,7 +353,7 @@ footer {
 .hidden-text {
   min-height: 0;
   margin: 2px 12px;
-  font-size: 20px;
+  font-size: 25px;
   color: #2f8277;
   opacity: 0;
   animation: opac 0.6s linear forwards;
@@ -866,11 +868,13 @@ canvas {
 
 .p_text {
   margin: 5px 7px;
+  font-size: 2vmin;
   color: #2f8277;
 }
 .p_text_w {
   padding: 7px 9px;
   color: white;
+  font-size: 2vmin;
 }
 
 .many_p {
@@ -957,7 +961,6 @@ canvas {
 .active {
   border-radius: 10px;
   padding: 0 5px;
-  margin: 4px 10px;
   background-color: white;
 }
 .active a {
