@@ -60,6 +60,9 @@ footer {
 
 .main-menu__inner {
   display: flex;
+  margin: 4px 10px;
+  align-items: center;
+  /* text-align: center; */
   justify-content: space-around;
 }
 .main-menu__inner a {
@@ -337,6 +340,7 @@ footer {
 
 .history_img {
   width: 60vw;
+  border-radius: 20px;
   height: auto;
 }
 
@@ -347,7 +351,7 @@ footer {
 .hidden-text {
   min-height: 0;
   margin: 2px 12px;
-  font-size: 24px;
+  font-size: 20px;
   color: #2f8277;
   opacity: 0;
   animation: opac 0.6s linear forwards;
@@ -662,12 +666,16 @@ video {
   text-align: justify;
 }
 .background_color {
-  font-size: 35px;
+  font-size: 28px;
   width: 100%;
   animation: back_color_rev 0.4s ease-in-out forwards;
 }
 .background_color:hover {
   animation: back_color 0.4s ease-in-out forwards;
+}
+.dark {
+  color: #2f8277;
+  margin-bottom: 7px;
 }
 
 @keyframes back_color {
@@ -844,4 +852,114 @@ video {
 }
 canvas {
   display: block;
+}
+
+#countdown {
+  display: flex;
+  color: #41b3a3;
+  /* opacity: 0; */
+  justify-content: center;
+  align-items: center;
+  font-size: 10vw;
+  margin: 10px 5px;
+}
+
+.p_text {
+  margin: 5px 7px;
+  color: #2f8277;
+}
+.p_text_w {
+  padding: 7px 9px;
+  color: white;
+}
+
+.many_p {
+  margin: 0 10px;
+  background-color: #41b3a3;
+  border-radius: 20px;
+}
+/* ============ */
+#starter {
+  background-color: white;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  padding: 15px 40px;
+  color: #41b3a3;
+  border: 1px solid #2f8277;
+  cursor: pointer;
+  letter-spacing: 2px;
+  position: relative;
+  overflow: hidden;
+  margin: 10px 20px;
+}
+
+#starter:before {
+  content: "";
+  position: absolute;
+  height: 150px;
+  width: 50px;
+  background: #41b3a3;
+  left: -55px;
+  top: -40px;
+  transform: rotate(37deg);
+  transition: all 0.3s;
+  opacity: 0.3;
+}
+
+#starter:hover:before {
+  left: 95%;
+}
+.competitive {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#timer {
+  font-size: 8vw;
+  color: #41b3a3;
+}
+
+#click_button {
+  background-color: white;
+  color: white;
+  color: #41b3a3;
+  border: 1px solid #2f8277;
+  cursor: pointer;
+  width: 12vw;
+  height: 12vmin;
+  letter-spacing: 2px;
+  position: relative;
+  overflow: hidden;
+  margin: 10px 20px;
+}
+#answer {
+  color: white;
+  color: #41b3a3;
+  text-align: center;
+  /* border: 1px solid #2f8277; */
+  cursor: pointer;
+  width: 15vw;
+  /* height: 12vmin; */
+  letter-spacing: 2px;
+  position: relative;
+  overflow: hidden;
+  margin: 10px 20px;
+  border-radius: 10px;
+}
+
+#counter {
+  color: #41b3a3;
+  font-size: 5vw;
+}
+
+.active {
+  border-radius: 10px;
+  padding: 0 5px;
+  margin: 4px 10px;
+  background-color: white;
+}
+.active a {
+  color: #41b3a3;
 }

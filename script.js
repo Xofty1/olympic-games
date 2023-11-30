@@ -1,3 +1,12 @@
+window.onload = function () {
+  document.body.style.overflow = "auto";
+  document.body.classList.add("loaded_hiding");
+  window.setTimeout(function () {
+    document.body.classList.add("loaded");
+    document.body.classList.remove("loaded_hiding");
+  }, 500);
+};
+
 document.addEventListener("DOMContentLoaded", function () {
   document
     .querySelector(".main_wrapper_first_img__big")
@@ -89,52 +98,69 @@ function changeSize(element) {
   element.setAttribute("data-increased", !isIncreased);
 }
 
-window.onload = function () {
-  document.body.style.overflow = "auto";
-  document.body.classList.add("loaded_hiding");
-  window.setTimeout(function () {
-    document.body.classList.add("loaded");
-    document.body.classList.remove("loaded_hiding");
-  }, 500);
-};
-// Получаем ссылку на холст и его контекст
-const canvas = document.getElementById("drawCanvas");
-const ctx = canvas.getContext("2d");
+const answer = document.getElementById("answer");
+const countdownElement = document.getElementById("countdown");
+let click;
+function startCountdown() {
+  answer.textContent = "";
 
-// Устанавливаем размер холста в размер окна
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+  const timerElement = document.getElementById("timer");
+  const buttonElement = document.querySelector("button");
+  timerElement.textContent = "30.00";
+  click = 0;
+  let countdown = 3;
 
-// Переменные для отслеживания состояния мыши
-let painting = false;
+  countdownElement.textContent = countdown;
+  counter.textContent = click;
+  const countdownInterval = setInterval(() => {
+    countdown--;
+    countdownElement.textContent = countdown;
 
-// Функция начала рисования
-function startPainting() {
-  painting = true;
-  draw(event);
+    if (countdown === 0) {
+      clickbutton.disabled = false;
+      clearInterval(countdownInterval);
+
+      countdownElement.textContent = "START";
+      timerElement.style.display = "block";
+      startTimer();
+    }
+  }, 1000);
+
+  buttonElement.disabled = true;
 }
 
-// Функция прекращения рисования
-function stopPainting() {
-  painting = false;
-  ctx.beginPath();
+const clickbutton = document.getElementById("click_button");
+const counter = document.getElementById("counter");
+
+function startTimer() {
+  const timerElement = document.getElementById("timer");
+
+  clickbutton.disabled = false;
+  let timeLeft = 30;
+  timerElement.textContent = timeLeft.toFixed(2);
+  clickbutton.addEventListener("click", function () {
+    if (clickbutton.disabled == false) click++;
+    counter.textContent = click;
+  });
+  const timerInterval = setInterval(() => {
+    timeLeft -= 0.01;
+
+    if (timeLeft < 0) {
+      clearInterval(timerInterval);
+      timerElement.textContent = (-timeLeft).toFixed(2);
+      document.querySelector("button").disabled = false;
+      clickbutton.disabled = true;
+      if (click < 180)
+        answer.textContent = "Молодец, но нужно еще потренироваться";
+      else if (click <= 205)
+        answer.textContent =
+          "Результат, но я думаю, что для тебя это не предел";
+      else if (click > 205)
+        answer.textContent =
+          "Ты гений, из тебя получится отличный киберспортсмен";
+      countdownElement.textContent = "TIMER";
+    } else {
+      timerElement.textContent = timeLeft.toFixed(2);
+    }
+  }, 10);
 }
-
-// Функция рисования
-function draw(event) {
-  if (!painting) return;
-
-  ctx.lineWidth = 5;
-  ctx.lineCap = "round";
-  ctx.strokeStyle = "black";
-
-  ctx.lineTo(event.clientX, event.clientY);
-  ctx.stroke();
-  ctx.beginPath();
-  ctx.moveTo(event.clientX, event.clientY);
-}
-
-// Добавляем обработчики событий для мыши
-canvas.addEventListener("mousedown", startPainting);
-canvas.addEventListener("mouseup", stopPainting);
-canvas.addEventListener("mousemove", draw);
