@@ -582,6 +582,7 @@ video {
 
 .text {
   margin: 10px;
+  font-size: 20px;
 }
 
 .blue {
@@ -868,7 +869,7 @@ canvas {
 
 .p_text {
   margin: 5px 7px;
-  font-size: 2vmin;
+  font-size: 20px;
   color: #2f8277;
 }
 .p_text_w {
@@ -928,11 +929,12 @@ canvas {
 #click_button {
   background-color: white;
   color: white;
+  /* font-size: 2vmin; */
   color: #41b3a3;
   border: 1px solid #2f8277;
   cursor: pointer;
-  width: 12vw;
-  height: 12vmin;
+  width: 120px;
+  height: 120px;
   letter-spacing: 2px;
   position: relative;
   overflow: hidden;
