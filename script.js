@@ -6,7 +6,6 @@ window.onload = function () {
     document.body.classList.remove("loaded_hiding");
   }, 500);
 };
-
 document.addEventListener("DOMContentLoaded", function () {
   document
     .querySelector(".main_wrapper_first_img__big")
@@ -15,17 +14,16 @@ document.addEventListener("DOMContentLoaded", function () {
     .querySelector(".main_wrapper_first_img__small")
     .classList.add("animate-small");
 
-  var checkbox = document.getElementById("menu-toggle");
-  var menu = document.getElementById("menu");
-  var clickCount = 0;
+  // var checkbox = document.getElementById("menu-toggle");
+  // var menu = document.getElementById("menu");
 
-  checkbox.addEventListener("change", function () {
-    clickCount++;
-
-    if (clickCount == 2) {
-      menu.classList.toggle("animate");
-    }
-  });
+  // checkbox.addEventListener("change", function () {
+  //   if (checkbox.checked) {
+  //     menu.classList.remove("animate");
+  //   } else {
+  //     menu.classList.add("animate");
+  //   }
+  // });
 });
 
 function revealText(element) {

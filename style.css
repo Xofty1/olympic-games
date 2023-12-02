@@ -164,7 +164,6 @@ footer {
   transform: rotate(180deg);
   transition: transform 0.2s ease;
 }
-
 #menu-toggle:checked + #trigger + #burger:before {
   width: 20px;
   top: -2px;
@@ -189,6 +188,7 @@ footer {
   border-bottom-right-radius: 100%;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
   transition: 0.2s;
+  animation: not-checked-anim 0.2s both;
 }
 
 .animate {
@@ -433,9 +433,7 @@ footer {
   background-color: #41b3a3;
   overflow: hidden;
 }
-.end-video {
-  background-color: #e27d60;
-}
+
 video {
   padding: 10px 0;
   width: 60vw;
@@ -491,9 +489,12 @@ video {
   font-size: 3vmin;
   position: absolute;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   bottom: 0;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -10%);
   color: white;
   z-index: 2;
   display: none;
@@ -532,6 +533,10 @@ video {
 
 .revers {
   flex-direction: row-reverse;
+  background-color: #e27d60;
+}
+.revers_m {
+  flex-direction: row-reverse;
 }
 /* Стили при наведении на изображение с классом "styled-image" */
 
@@ -563,9 +568,9 @@ video {
 }
 
 .social-link > img {
-  background-color: white;
+  background-color: transparent;
   border-radius: 5px;
-  width: 4vw;
+  width: 4vmax;
   padding: 3px;
   margin: 0 7px;
 }
@@ -602,11 +607,11 @@ video {
 }
 .yellow {
   padding: 2px;
-  border: 1.3vmin solid yellow;
+  border: 1.3vmin solid rgb(240, 240, 0);
 }
 
 .yellow_text {
-  color: yellow;
+  color: rgb(230, 230, 0);
 }
 .red {
   padding: 2px;
@@ -875,7 +880,7 @@ canvas {
 .p_text_w {
   padding: 7px 9px;
   color: white;
-  font-size: 2vmin;
+  font-size: 20px;
 }
 
 .many_p {
@@ -946,13 +951,14 @@ canvas {
   text-align: center;
   /* border: 1px solid #2f8277; */
   cursor: pointer;
-  width: 15vw;
+  width: 80vw;
   /* height: 12vmin; */
   letter-spacing: 2px;
   position: relative;
   overflow: hidden;
   margin: 10px 20px;
   border-radius: 10px;
+  font-size: 30px;
 }
 
 #counter {
