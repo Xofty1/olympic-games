@@ -127,14 +127,11 @@ starter.addEventListener("click", function () {
 const answer = document.getElementById("answer");
 const countdownElement = document.getElementById("countdown");
 function startCountdown() {}
-
 const clickbutton = document.getElementById("click_button");
 const counter = document.getElementById("counter");
-
 function startTimer() {
   const timerElement = document.getElementById("timer");
   let click = 0;
-
   clickbutton.disabled = false;
   let timeLeft = 30;
   timerElement.textContent = timeLeft.toFixed(2);

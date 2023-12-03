@@ -209,6 +209,7 @@ footer {
 .burger-menu {
   display: none;
 }
+
 @media (max-width: 768px) {
   .main-menu {
     display: none;
@@ -231,6 +232,7 @@ footer {
     flex-wrap: wrap;
   }
 }
+
 /*----------------------------*/
 
 .main_wrapper_first_img {
