@@ -95,21 +95,18 @@ function changeSize(element) {
   // Инвертируем состояние и обновляем атрибут данных
   element.setAttribute("data-increased", !isIncreased);
 }
-
-const answer = document.getElementById("answer");
-const countdownElement = document.getElementById("countdown");
-let click;
-function startCountdown() {
+const starter = document.getElementById("starter");
+starter.addEventListener("click", function () {
   answer.textContent = "";
 
   const timerElement = document.getElementById("timer");
   const buttonElement = document.querySelector("button");
   timerElement.textContent = "30.00";
-  click = 0;
-  let countdown = 3;
 
+  let countdown = 3;
+  counter.textContent = "0";
   countdownElement.textContent = countdown;
-  counter.textContent = click;
+
   const countdownInterval = setInterval(() => {
     countdown--;
     countdownElement.textContent = countdown;
@@ -125,13 +122,18 @@ function startCountdown() {
   }, 1000);
 
   buttonElement.disabled = true;
-}
+});
+
+const answer = document.getElementById("answer");
+const countdownElement = document.getElementById("countdown");
+function startCountdown() {}
 
 const clickbutton = document.getElementById("click_button");
 const counter = document.getElementById("counter");
 
 function startTimer() {
   const timerElement = document.getElementById("timer");
+  let click = 0;
 
   clickbutton.disabled = false;
   let timeLeft = 30;
